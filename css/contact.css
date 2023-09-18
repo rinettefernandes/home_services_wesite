@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+    /* color: #fff; */
+}
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding:50px  100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('../images/contactus.jpg');
+    background-size: cover;
+ }
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+
+}
+
+.contact .content p {
+    font-weight: 300;
+    color: #fff;
+
+}
+.container{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+ width: 50%;
+ display:flex;
+ flex-direction: column;
+}
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon {
+    min-width:60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left:20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #00bcd0;
+}
+
+.ContactForm {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.ContactForm h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.ContactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.ContactForm .inputBox input,
+.ContactForm .inputBox input textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.ContactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.ContactForm .inputBox input:focus ~ span,
+.ContactForm .inputBox input:valid ~ span,
+.ContactForm .inputBox textarea:focus ~ span,
+.ContactForm .inputBox textarea:valid ~ span
+{
+    color:#e91e63;
+    font-size:12px;
+    transform: translateY(-20px);
+} 
+.ContactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding:10px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+@media (max-width:991px)
+{
+    .contact
+    {
+        padding:50px;
+    }
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .contactInfo
+    {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .ContactForm
+    {
+        width:100%
+    }
+}
+#txtarea{
+   
+    width:400px;
+}
+
+
+nav{
+    background:#0082e6;
+    height:70px;
+    width:100%;
+
+}
+label.logo{
+    color:white;
+    font-size:35px;
+    line-height:80px;
+    padding:0 100px;
+    font-weight:bold;
+}
+nav ul{
+   float:right;
+   margin-right:20px;
+
+}
+nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin:0 5px;
+
+}
+nav ul li a{
+    color:white;
+    font-size:17px;
+    padding:7px 13px;
+    border-radius:3px;
+    text-transform:uppercase;
+
+}
+a:hover{
+    background:#1b9bff;
+     transition:.5s;
+}
+.checkbtn{
+    font-size:30px;
+    color:white;
+    float:right;
+    line-height:80px;
+    margin-right:40px;
+    cursor:pointer;
+    display:none;
+}
+#check{
+    display:none;
+}
+@media (max-width:952px){
+    label.logo{
+        font-size:30px;
+        padding-left:50px;
+
+    }
+
+nav ul li a{
+    font-size:16px;
+}
+}
+@media(max-width:858px){
+    .checkbtn{
+        display:block;
+    }
+    ul{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        background:#2c3e50;
+        top:80px;
+        left:-100%;
+        text-align:center;
+        transition:all .5s;
+    }
+    nav ul li{
+        display:block;
+        margin:50px 0;
+        line-height:30px;
+    }
+    nav ul li a{
+        
+            font-size:20px;
+    }
+        a:hover{
+            background:none;
+            color:#0082e6;
+        }
+        #check:checked ~ ul{
+            left:0;
+        }
+    }
